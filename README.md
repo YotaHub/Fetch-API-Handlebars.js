@@ -1,1 +1,1 @@
-# Fetch-API-Handlebars.js
+# FetchAPI-Handlebars.js
