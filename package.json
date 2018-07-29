@@ -1,0 +1,12 @@
+{
+  "name": "PWA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "http-server -p 1336 src -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

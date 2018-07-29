@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fetch API Test</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js" charset="utf-8"></script>
+</head>
+<body>
+
+<script id="entry-template" type="text/x-handlebars-template">
+
+      <div class="cell small-12 medium-6 large-4 d-flex align-items-stretch">
+        <div class="card mb-0">
+          <img class="card-img-top" src="{{imgUrl}}" alt="Card image cap">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{body}}</p>
+            <a href="{{link}}" class="btn btn-primary mt-auto">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+</script>
+
+<div class="container position-relative">
+    <div id="content" class="grid-x grid-margin-x grid-margin-y my-3"></div>
+</div>
+
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
+
+<script async type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
